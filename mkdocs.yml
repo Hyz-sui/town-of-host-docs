@@ -1,0 +1,55 @@
+site_name: Town Of Host
+site_url: https://hyz-sui.github.io/town-of-host-docs
+repo_url: https://github.com/tukasa0001/TownOfHost
+repo_name: tukasa0001/TownOfHost
+theme:
+  name: material
+  favicon: assets/icon.png
+  icon:
+    logo: material/home
+    repo: material/github
+  palette:
+    # 自動
+    - media: "(prefers-color-scheme)"
+      primary: light blue
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      accent: green
+      toggle:
+        icon: material/white-balance-sunny
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: green
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+extra_css:
+  - extra.css
+plugins:
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ja
+          name: 日本語
+          build: true
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
