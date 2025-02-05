@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // mkdocs
+        {
+            "label": "mkserve",
+            "type": "shell",
+            "command": "mkdocs serve",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^.*(Error|Except).*$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*Building documentation.*",
+                    "endsPattern": ".*Serving on*"
+                }
+            }
+        },
+        {
+            "label": "mkkill",
+            "type": "shell",
+            "command": "${command:workbench.action.terminal.kill}"
+        },
+    ]
+}
