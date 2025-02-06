@@ -1,3 +1,5 @@
+# https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions
+# TODO: キャッシュがおかしいので後で調べる
 name: ci 
 on:
   push:
