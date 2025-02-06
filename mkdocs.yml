@@ -32,9 +32,11 @@ theme:
       toggle:
         icon: material/lightbulb-auto
         name: Switch to system preference
+  features:
+    - content.code.copy
   font:
     text: Roboto
-    code: Roboto Mono
+    code: Fira Code
 extra_css:
   - extra.css
 plugins:
@@ -48,8 +50,30 @@ plugins:
         - locale: ja
           name: 日本語
           build: true
+          admonition_translations:
+            tip: ヒント
+            warning: 注意
+            note: メモ
+            info: 情報
+            abstract: 要約
+            success: 成功
+            failure: 失敗
+            question: 疑問
+            danger: 危険
+            bug: 不具合
+            example: 例
+            quote: 引用
+  - search
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - toc:
+      permalink: "#"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.keys
+  - footnotes
