@@ -2,59 +2,126 @@
 * {
     font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
+code,
+code * {
+    font-family: 'Fira Code', monospace;
+}
 
-/* TODO: とっ散らかってるのできれいにする */
+[data-md-color-scheme=slate] {
+    /* ダークモードのelevationは簡易的に色の変更で対応 */
+    --s-elevation-color: #aaa;
+}
+
+[data-md-color-scheme=default] {
+    --s-elevation-color: #000;
+}
+
+:root>* {
+    /* 色 */
+    --s-primary-color-opaque-x-high: rgb(from var(--md-primary-fg-color--light) r g b / 0.2);
+    --s-primary-color-opaque-high: rgb(from var(--md-primary-fg-color--light) r g b / 0.16);
+    --s-primary-color-opaque: rgb(from var(--md-primary-fg-color--light) r g b / 0.12);
+    --s-primary-color-opaque-low: rgb(from var(--md-primary-fg-color--light) r g b / 0.08);
+    --s-primary-color-opaque-x-low: rgb(from var(--md-primary-fg-color--light) r g b / 0.04);
+    /* elevation */
+    --s-elevation-high: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 5px -1px, rgb(from var(--s-elevation-color) r g b / .14) 0px 6px 10px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 18px 0px;
+    --s-elevation: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 3px -2px, rgb(from var(--s-elevation-color) r g b / .14) 0px 3px 4px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 8px 0px;
+}
+
+/* スタイルの調整 */
+.md-typeset hr {
+    /* 罫線が明るすぎて見えない */
+    border-bottom-color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset h1 {
+    /* 視認性のため最上位見出しの文字色が薄くならないようにする */
+    color: inherit;
+    /* 下に線 */
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--md-default-fg-color--lighter);
+}
 /* ボタンをmaterialっぽくする */
 /** 基底ボタン */
 a.md-button.s-style {
     border-radius: 999999px;
 }
 
+a.md-button.s-style:hover {
+    color: var(--md-primary-fg-color);
+}
 /** filled */
 a.md-button.s-button--filled.s-style {
     border: unset;
     background-color: var(--md-primary-fg-color);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
     color: #ffff;
 }
 
 a.md-button.s-button--filled.s-style:hover,
 a.md-button.s-button--filled.s-style:focus {
     background-color: var(--md-primary-fg-color);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+    box-shadow: var(--s-elevation);
     color: #ffff;
 }
 
 a.md-button.s-button--filled.s-style:active {
-    background-color: var(--md-primary-fg-color);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
-    color: #ffff;
+    background-color: var(--md-primary-fg-color--light);
+        box-shadow: none;
 }
 
 /** elevated */
 a.md-button.s-button--elevated.s-style {
     border: unset;
-    background-color: rgb(from var(--md-primary-fg-color--light) r g b / 0.04);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
+    background-color: var(--s-primary-color-opaque-x-low);
+        box-shadow: var(--s-elevation);
     color: var(--md-primary-fg-color);
 }
 
 a.md-button.s-button--elevated.s-style:hover,
 a.md-button.s-button--elevated.s-style:focus {
-    background-color: rgb(from var(--md-primary-fg-color--light) r g b / 0.08);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+    background-color: var(--s-primary-color-opaque-low);
+        box-shadow: var(--s-elevation-high);
+    }
+    
+    a.md-button.s-button--elevated.s-style:active {
+        background-color: var(--s-primary-color-opaque);
+        box-shadow: var(--s-elevation);
+    }
+    
+    /** filled-tonal */
+    a.md-button.s-button--filled-tonal.s-style {
+        border: unset;
+        background-color: var(--s-primary-color-opaque-x-high);
     color: var(--md-primary-fg-color);
 }
 
-a.md-button.s-button--elevated.s-style:active {
-    background-color: rgb(from var(--md-primary-fg-color--light) r g b / 0.08);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+a.md-button.s-button--filled-tonal.s-style:hover,
+a.md-button.s-button--filled-tonal.s-style:focus {
+    box-shadow: var(--s-elevation);
 }
 
-a.md-button.s-style:hover {
+a.md-button.s-button--filled-tonal.s-style:active {
+    box-shadow: none;
+}
+
+/** outlined */
+a.md-button.s-button--outlined.s-style {
+    border: 1px solid var(--md-default-fg-color--light);
+}
+
+a.md-button.s-button--outlined.s-style:hover,
+a.md-button.s-button--outlined.s-style:focus {
+    border-color: var(--md-primary-fg-color);
+    background-color: var(--s-primary-color-opaque-low);
     color: var(--md-primary-fg-color);
 }
 
+a.md-button.s-button--outlined.s-style:active {
+    border-color: var(--md-default-fg-color--lighter);
+    background-color: var(--s-primary-color-opaque);
+}
+
+/** blurple */
 a.md-button.s-style.blurple-bg,
 a.md-button.s-style.blurple-bg:hover,
 a.md-button.s-style.blurple-bg:focus,
