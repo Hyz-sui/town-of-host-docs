@@ -4,6 +4,12 @@
 <a href="../" class="md-button s-style s-button--elevated">:material-chevron-triple-right: English</a>
 <!-- markdownlint-restore -->
 
+!!! warning
+    このサイトは作成中の草案です。  
+    Town Of Hostの説明を読むには[readme](https://github.com/tukasa0001/TownOfHost?tab=readme-ov-file#town-of-host)と[wiki](https://github.com/tukasa0001/TownOfHost/wiki)にアクセスしてください。
+
+    [:fontawesome-brands-discord: Discordサーバーに参加](https://discord.gg/W5ug6hXB9V){ .md-button .s-style .s-button--filled .blurple-bg }
+
 TownOfHostは、ホストが導入するだけで使用できるAmong Usのmodです。
 
 ## 特徴
