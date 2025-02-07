@@ -64,6 +64,8 @@ plugins:
             example: 例
             quote: 引用
   - search
+hooks:
+  - hooks/share.py
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -77,3 +79,4 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.keys
   - footnotes
+  - md_in_html
