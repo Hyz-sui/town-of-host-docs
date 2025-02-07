@@ -1,10 +1,12 @@
 site_name: Town Of Host
 site_url: https://hyz-sui.github.io/town-of-host-docs
 repo_url: https://github.com/tukasa0001/TownOfHost
+copyright: "&copy; 2025 Hyz-sui, town-of-host-docs contributors"
 repo_name: tukasa0001/TownOfHost
 theme:
   name: material
   favicon: assets/icon.png
+  custom_dir: overrides
   icon:
     logo: material/home
     repo: material/github
@@ -34,6 +36,10 @@ theme:
         name: Switch to system preference
   features:
     - content.code.copy
+    - navigation.tabs
+    - navigation.indexes
+    - search.suggest
+    - header.autohide
   font:
     text: Roboto
     code: Fira Code
@@ -64,6 +70,11 @@ plugins:
             example: 例
             quote: 引用
   - search
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
+hooks:
+  - hooks/share.py
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -77,3 +88,11 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.keys
   - footnotes
+  - md_in_html
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/W5ug6hXB9V
+    - icon: fontawesome/brands/github
+      link: https://github.com/tukasa0001/TownOfHost
