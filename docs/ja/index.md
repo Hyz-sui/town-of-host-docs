@@ -10,12 +10,12 @@
 
     [:fontawesome-brands-discord: Discordサーバーに参加](https://discord.gg/W5ug6hXB9V){ .md-button .s-style .s-button--filled .blurple-bg }
 
-TownOfHostは、ホストが導入するだけで使用できるAmong Usのmodです。
+Town Of Hostは、ホストが導入するだけで使用できるAmong Usのmodです。
 
 ## 特徴
 
 このmodはホストのクライアントに導入するだけで動作し、他のクライアントのmodの導入/未導入及び端末の種類に関係なく動作します。  
-また、カスタムサーバーを利用したmodと違い、URLやファイル編集などによるサーバー追加も不要なため、ホスト以外のプレイヤーはTownOfHostを導入したホストの部屋に参加するだけで追加役職を楽しむことができます。
+また、カスタムサーバーを利用したmodと違い、URLやファイル編集などによるサーバー追加も不要なため、ホスト以外のプレイヤーはTown Of Hostを導入したホストの部屋に参加するだけで追加役職を楽しむことができます。
 
 [:fontawesome-brands-discord: Discordサーバーに参加](https://discord.gg/W5ug6hXB9V){ .md-button .s-style .s-button--filled .blurple-bg }
 
