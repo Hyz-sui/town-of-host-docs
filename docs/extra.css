@@ -31,6 +31,8 @@ code * {
     --s-fg-color-opaque: rgb(from var(--md-default-fg-color--light) r g b / 0.12);
     --s-fg-color-opaque-low: rgb(from var(--md-default-fg-color--light) r g b / 0.08);
     --s-fg-color-opaque-x-low: rgb(from var(--md-default-fg-color--light) r g b / 0.04);
+/* その他の色 */
+    --s-impostor-red: #ff1919;
 /* elevation */
     --s-elevation-high: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 5px -1px, rgb(from var(--s-elevation-color) r g b / .14) 0px 6px 10px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 18px 0px;
     --s-elevation: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 3px -2px, rgb(from var(--s-elevation-color) r g b / .14) 0px 3px 4px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 8px 0px;
@@ -213,4 +215,13 @@ a.md-button.s-style.s-share-button.s-share-os:focus {
 a.md-button.s-style.s-share-button.s-share-copy:active,
 a.md-button.s-style.s-share-button.s-share-os:active {
     background-color: var(--s-fg-color-opaque);
+}
+
+/* その他装飾 */
+.s-color-impostor-red {
+    color: var(--s-impostor-red);
+}
+
+.s-disabled {
+    color: var(--md-default-fg-color--lighter) !important;
 }
