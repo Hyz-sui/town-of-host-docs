@@ -1,0 +1,227 @@
+/* フォント設定 */
+* {
+    font-family: Roboto, 'Noto Sans JP', sans-serif;
+}
+
+code,
+code * {
+    font-family: 'Fira Code', monospace;
+}
+
+[data-md-color-scheme=slate] {
+    /* ダークモードのelevationは簡易的に色の変更で対応 */
+    --s-elevation-color: #aaa;
+}
+
+[data-md-color-scheme=default] {
+    --s-elevation-color: #000;
+}
+
+:root>* {
+/* 色 */
+/* primaryのバリエーション */
+    --s-primary-color-opaque-x-high: rgb(from var(--md-primary-fg-color--light) r g b / 0.2);
+    --s-primary-color-opaque-high: rgb(from var(--md-primary-fg-color--light) r g b / 0.16);
+    --s-primary-color-opaque: rgb(from var(--md-primary-fg-color--light) r g b / 0.12);
+    --s-primary-color-opaque-low: rgb(from var(--md-primary-fg-color--light) r g b / 0.08);
+    --s-primary-color-opaque-x-low: rgb(from var(--md-primary-fg-color--light) r g b / 0.04);
+/* 前景色のバリエーション */
+    --s-fg-color-opaque-x-high: rgb(from var(--md-default-fg-color--light) r g b / 0.2);
+    --s-fg-color-opaque-high: rgb(from var(--md-default-fg-color--light) r g b / 0.16);
+    --s-fg-color-opaque: rgb(from var(--md-default-fg-color--light) r g b / 0.12);
+    --s-fg-color-opaque-low: rgb(from var(--md-default-fg-color--light) r g b / 0.08);
+    --s-fg-color-opaque-x-low: rgb(from var(--md-default-fg-color--light) r g b / 0.04);
+/* その他の色 */
+    --s-impostor-red: #ff1919;
+/* elevation */
+    --s-elevation-high: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 5px -1px, rgb(from var(--s-elevation-color) r g b / .14) 0px 6px 10px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 18px 0px;
+    --s-elevation: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 3px -2px, rgb(from var(--s-elevation-color) r g b / .14) 0px 3px 4px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 8px 0px;
+}
+
+/* スタイルの調整 */
+.md-typeset hr {
+    /* 罫線が明るすぎて見えない */
+    border-bottom-color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset h1 {
+    /* 視認性のため最上位見出しの文字色が薄くならないようにする */
+    color: inherit;
+    /* 下に線 */
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--md-default-fg-color--lighter);
+}
+
+/* ボタンをmaterialっぽくする */
+/** 基底ボタン */
+a.md-button.s-style {
+    border-radius: 999999px;
+}
+
+a.md-button.s-style:hover {
+    color: var(--md-primary-fg-color);
+}
+
+/** filled */
+a.md-button.s-button--filled.s-style {
+    border: unset;
+    background-color: var(--md-primary-fg-color);
+    color: #ffff;
+}
+
+a.md-button.s-button--filled.s-style:hover,
+a.md-button.s-button--filled.s-style:focus {
+    background-color: var(--md-primary-fg-color);
+    box-shadow: var(--s-elevation);
+    color: #ffff;
+}
+
+a.md-button.s-button--filled.s-style:active {
+    background-color: var(--md-primary-fg-color--light);
+    box-shadow: none;
+}
+
+/** elevated */
+a.md-button.s-button--elevated.s-style {
+    border: unset;
+    background-color: var(--s-primary-color-opaque-x-low);
+    box-shadow: var(--s-elevation);
+    color: var(--md-primary-fg-color);
+}
+
+a.md-button.s-button--elevated.s-style:hover,
+a.md-button.s-button--elevated.s-style:focus {
+    background-color: var(--s-primary-color-opaque-low);
+    box-shadow: var(--s-elevation-high);
+    }
+    
+    a.md-button.s-button--elevated.s-style:active {
+        background-color: var(--s-primary-color-opaque);
+        box-shadow: var(--s-elevation);
+    }
+    
+    /** filled-tonal */
+    a.md-button.s-button--filled-tonal.s-style {
+        border: unset;
+        background-color: var(--s-primary-color-opaque-x-high);
+    color: var(--md-primary-fg-color);
+}
+
+a.md-button.s-button--filled-tonal.s-style:hover,
+a.md-button.s-button--filled-tonal.s-style:focus {
+    box-shadow: var(--s-elevation);
+}
+
+a.md-button.s-button--filled-tonal.s-style:active {
+    box-shadow: none;
+}
+
+/** outlined */
+a.md-button.s-button--outlined.s-style {
+    border: 1px solid var(--md-default-fg-color--light);
+}
+
+a.md-button.s-button--outlined.s-style:hover,
+a.md-button.s-button--outlined.s-style:focus {
+    border-color: var(--md-primary-fg-color);
+    background-color: var(--s-primary-color-opaque-low);
+    color: var(--md-primary-fg-color);
+}
+
+a.md-button.s-button--outlined.s-style:active {
+    border-color: var(--md-default-fg-color--lighter);
+    background-color: var(--s-primary-color-opaque);
+}
+
+/** blurple */
+a.md-button.s-style.blurple-bg,
+a.md-button.s-style.blurple-bg:hover,
+a.md-button.s-style.blurple-bg:focus,
+a.md-button.s-style.blurple-bg:active {
+    background-color: #5865F2;
+}
+/* share */
+/** シェアボタンのリスト */
+.md-typeset .s-list-none-container ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+/* シェアボタン */
+a.md-button.s-style.s-share-button {
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 99999px;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    border-width: 0;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+a.md-button.s-style.s-share-button:active {
+    box-shadow: none;
+}
+
+a.md-button.s-style.s-share-button * {
+    margin: auto;
+}
+
+/* bluesky */
+a.md-button.s-style.s-share-button.s-share-bsky {
+    background-color: #1185fe;
+    box-shadow: var(--s-elevation);
+}
+
+a.md-button.s-style.s-share-button.s-share-bsky:hover {
+    box-shadow: var(--s-elevation-high);
+}
+
+a.md-button.s-style.s-share-button.s-share-bsky:active {
+    box-shadow: var(--s-elevation);
+}
+
+/* 𝕏 */
+a.md-button.s-style.s-share-button.s-share-x {
+    background-color: #0f1419;
+    box-shadow: var(--s-elevation);
+}
+
+a.md-button.s-style.s-share-button.s-share-x:hover {
+    box-shadow: var(--s-elevation-high);
+}
+
+a.md-button.s-style.s-share-button.s-share-x:active {
+    box-shadow: var(--s-elevation);
+}
+
+/* リンクをコピー, OSの共有機能の呼び出し */
+a.md-button.s-style.s-share-button.s-share-copy,
+a.md-button.s-style.s-share-button.s-share-os {
+    border: 1px solid var(--md-default-fg-color);
+    color: var(--md-default-fg-color);
+}
+
+a.md-button.s-style.s-share-button.s-share-copy:hover,
+a.md-button.s-style.s-share-button.s-share-copy:focus,
+a.md-button.s-style.s-share-button.s-share-os:hover,
+a.md-button.s-style.s-share-button.s-share-os:focus {
+    background-color: var(--s-fg-color-opaque-low);
+}
+
+a.md-button.s-style.s-share-button.s-share-copy:active,
+a.md-button.s-style.s-share-button.s-share-os:active {
+    background-color: var(--s-fg-color-opaque);
+}
+
+/* その他装飾 */
+.s-color-impostor-red {
+    color: var(--s-impostor-red);
+}
+
+.s-disabled {
+    color: var(--md-default-fg-color--lighter) !important;
+}
