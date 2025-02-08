@@ -3,7 +3,7 @@
 ## インポスター
 
 - [バウンティハンター](bounty-hunter.md){ .s-disabled }
-- [イビルハッカー](evil-hacker.md){ .s-disabled }
+- [イビルハッカー](evil-hacker.md)
 - [イビルトラッカー](evil-tracker.md){ .s-disabled }
 - [花火職人](fireworks.md){ .s-disabled }
 - [インサイダー](insider.md){ .s-disabled }
