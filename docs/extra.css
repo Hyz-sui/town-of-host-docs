@@ -214,3 +214,7 @@ a.md-button.s-style.s-share-button.s-share-copy:active,
 a.md-button.s-style.s-share-button.s-share-os:active {
     background-color: var(--s-fg-color-opaque);
 }
+
+.s-disabled {
+    color: var(--md-default-fg-color--lighter) !important;
+}

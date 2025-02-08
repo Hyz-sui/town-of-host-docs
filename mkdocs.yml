@@ -53,6 +53,13 @@ plugins:
           default: true
           name: English
           build: true
+          nav_translations:
+            Roles: Roles
+            Addons: Add-ons
+            Crewmates: Crewmate Roles
+            Impostors: Impostor Roles
+            Neutrals: Neutral Roles
+            Others: Other Roles
         - locale: ja
           name: 日本語
           build: true
@@ -69,6 +76,13 @@ plugins:
             bug: 不具合
             example: 例
             quote: 引用
+          nav_translations:
+            Roles: 追加役職
+            Addons: 属性
+            Crewmates: クルー役職
+            Impostors: インポスター役職
+            Neutrals: ニュートラル役職
+            Others: その他の追加役職
   - search
   - git-revision-date-localized:
       type: timeago
