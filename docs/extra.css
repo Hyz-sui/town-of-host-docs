@@ -32,6 +32,9 @@ code * {
     --s-fg-color-opaque-low: rgb(from var(--md-default-fg-color--light) r g b / 0.08);
     --s-fg-color-opaque-x-low: rgb(from var(--md-default-fg-color--light) r g b / 0.04);
 /* その他の色 */
+    --s-windows-blue: #0078D6;
+        --s-android-green: #3DDC84;
+        --s-apple-gray: #A2AAAD;
     --s-impostor-red: #ff1919;
 /* elevation */
     --s-elevation-high: rgb(from var(--s-elevation-color) r g b / .2) 0px 3px 5px -1px, rgb(from var(--s-elevation-color) r g b / .14) 0px 6px 10px 0px, rgb(from var(--s-elevation-color) r g b / .12) 0px 1px 18px 0px;
@@ -222,6 +225,17 @@ a.md-button.s-style.s-share-button.s-share-os:active {
     color: var(--s-impostor-red);
 }
 
+.s-color-windows {
+    color: var(--s-windows-blue);
+}
+
+.s-color-android {
+    color: var(--s-android-green);
+}
+
+.s-color-apple {
+    color: var(--s-apple-gray);
+}
 .s-disabled {
     color: var(--md-default-fg-color--lighter) !important;
 }
