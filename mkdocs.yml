@@ -54,7 +54,7 @@ plugins:
           name: English
           build: true
           nav_translations:
-            Roles: Roles
+            10 roles: Roles
             Addons: Add-ons
             Crewmates: Crewmate Roles
             Impostors: Impostor Roles
@@ -77,7 +77,7 @@ plugins:
             example: 例
             quote: 引用
           nav_translations:
-            Roles: 追加役職
+            10 roles: 追加役職
             Addons: 属性
             Crewmates: クルー役職
             Impostors: インポスター役職
