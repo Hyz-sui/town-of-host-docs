@@ -52,4 +52,8 @@ TOHはカスタムサーバーを必要とせず公式サーバー上で動作�
 
 [Impostor](https://github.com/Impostor/Impostor)等を使用し，自分でカスタムサーバーを立ち上げることもできます．詳細についてはImpostorの説明を参照してください．
 
+!!! warning
+    TOHを使用するためにカスタムサーバーをホストする場合，必ず[`AllowHostAuthority`オプション](https://github.com/Impostor/Impostor/blob/master/docs/Server-configuration.md#compatibility)を`true`に設定してください  
+    この設定を行わない場合，TOHは正しく動作しません
+
 [^1]: 出典: [Among Us Custom Server - TOWN OF HOST MODS](https://aumods.org/)

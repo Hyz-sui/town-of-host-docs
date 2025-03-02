@@ -51,4 +51,8 @@ Once you have done this, you can connect to custom regions without any additiona
 
 You can also set up your own custom server using [Impostor](https://github.com/Impostor/Impostor) or other tools. See the Impostor documentation for details.
 
+!!! warning
+    To use TOH with your server, be sure to set the [`AllowHostAuthority` option](https://github.com/Impostor/Impostor/blob/master/docs/Server-configuration.md#compatibility) to `true`.  
+    TOH will not work properly without this setting.
+
 [^1]: Reference: [Among Us Custom Server - TOWN OF HOST MODS](https://aumods.org/)
