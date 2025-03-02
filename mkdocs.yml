@@ -60,6 +60,7 @@ plugins:
             Impostors: Impostor Roles
             Neutrals: Neutral Roles
             Others: Other Roles
+            90 advanced: Advanced
         - locale: ja
           name: 日本語
           build: true
@@ -83,6 +84,7 @@ plugins:
             Impostors: インポスター役職
             Neutrals: ニュートラル役職
             Others: その他の追加役職
+            90 advanced: 高度
   - search
   - git-revision-date-localized:
       type: timeago
